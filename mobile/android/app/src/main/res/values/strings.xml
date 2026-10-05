@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Phim Ảnh</string>
+    <string name="title_activity_main">Phim Ảnh</string>
+    <string name="package_name">net.phimanh.app</string>
+    <string name="custom_url_scheme">net.phimanh.app</string>
+</resources>

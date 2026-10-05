@@ -1,0 +1,35 @@
+/* Bo sung mobile-only: safe-area Android + IonApp reset, khong doi giao dien web. */
+
+:root {
+  --ion-background-color: #070707;
+  --ion-text-color: #fafafa;
+  --ion-safe-area-top: env(safe-area-inset-top, 0px);
+  --ion-safe-area-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html, body, #root, ion-app {
+  height: 100%;
+  background: #070707;
+}
+
+ion-app {
+  --ion-background-color: #070707;
+}
+
+/* WebView Android: tranh bounce + giu scroll muot nhu ban web */
+body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* An scrollbar ngang cho cac rail phim (giong .scrollbar-hide cua web) */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Tap target toi thieu cho mobile ma khong pha layout */
+button, a, select, input[type="range"] {
+  touch-action: manipulation;
+}
+
+/* Video fullscreen tren Android WebView */
+video::-webkit-media-controls-fullscreen-button { display: flex; }
