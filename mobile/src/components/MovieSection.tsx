@@ -44,7 +44,7 @@ export default function MovieSection({
       className="relative mx-2 my-3 overflow-hidden rounded-[28px] border border-white/[0.07] bg-white/[0.02] py-5 md:mx-4 md:my-4 md:py-7"
       style={{ background: `radial-gradient(circle at 8% 0%, ${accent}26 0%, transparent 30%), linear-gradient(180deg, rgba(255,255,255,0.035) 0%, rgba(255,255,255,0.01) 100%)` }}
     >
-      <div className="pointer-events-none absolute -right-24 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full blur-3xl md:h-64 md:w-64" style={{ backgroundColor: `${accent}18` }} />
+      <div className="pointer-events-none absolute right-0 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full blur-3xl md:h-64 md:w-64" style={{ backgroundColor: `${accent}18` }} />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px" style={{ background: `linear-gradient(90deg, transparent 8%, ${accent}aa 50%, transparent 92%)` }} />
       <div className="relative z-10 mb-4 flex items-end justify-between px-4 md:px-8 lg:px-10">
         <div>

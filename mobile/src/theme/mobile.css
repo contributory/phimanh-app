@@ -22,6 +22,19 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Chan tran ngang tren man hinh nho: moi glow/decorative am (negative offset)
+   bi cat trong khung viewport, khong day document scrollWidth. */
+html, body, #root {
+  overflow-x: clip;
+  max-width: 100vw;
+}
+
+@supports not (overflow: clip) {
+  html, body, #root {
+    overflow-x: hidden;
+  }
+}
+
 /* An scrollbar ngang cho cac rail phim (giong .scrollbar-hide cua web) */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

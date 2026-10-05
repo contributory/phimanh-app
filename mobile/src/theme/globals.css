@@ -68,11 +68,16 @@
   
   body {
     @apply bg-background text-foreground;
-    /* Prevent flash of unstyled content during hydration */
-    opacity: 0;
+    /* FOUC guard chi danh cho web Next.js (co HydrationFix gan class hydrated).
+       Mobile Capacitor khong co HydrationFix -> giu opacity mac dinh de tranh den man. */
+    opacity: 1;
     transition: opacity 0.3s ease;
   }
-  
+
+  body.pre-hydration {
+    opacity: 0;
+  }
+
   /* Show body after hydration or fallback timeout */
   body.hydrated,
   body.fallback-show {

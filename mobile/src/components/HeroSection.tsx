@@ -44,7 +44,7 @@ export default function HeroSection({ movies }: { movies: any[] }) {
 
       <div className="relative z-10 mx-auto flex h-full min-h-0 w-full max-w-[1500px] items-center justify-center">
         <div className="relative h-full w-full max-w-[1320px]">
-          <div className="absolute -inset-8 -z-10 rounded-[44px] bg-black/50 blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-[44px] bg-black/50 blur-3xl" />
           <div className="relative h-full min-h-0 overflow-hidden rounded-[20px] border border-white/[0.12] bg-zinc-950 shadow-[0_20px_55px_rgba(0,0,0,0.5)] sm:rounded-[24px]">
             {movies.map((movie, idx) => (
               <div key={`card-bg-${movie.slug}`} className={`absolute inset-0 transition-opacity duration-700 ${idx === activeIndex ? 'opacity-100' : 'opacity-0'}`}>

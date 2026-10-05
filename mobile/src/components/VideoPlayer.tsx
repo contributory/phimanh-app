@@ -38,12 +38,32 @@ export default function VideoPlayer({
   const [muted, setMuted] = useState(false);
   const [showCtl, setShowCtl] = useState(true);
   const hideTimer = useRef<any>(null);
+  const playingRef = useRef(false);
 
+  // Hen gio an controls doc tu playingRef de tranh closure cu giu playing=false
+  // mai (loi controls khong bao gio tu an khi video dang chay).
   const poke = () => {
     setShowCtl(true);
     clearTimeout(hideTimer.current);
-    hideTimer.current = setTimeout(() => playing && setShowCtl(false), 2800);
+    hideTimer.current = setTimeout(() => {
+      if (playingRef.current) setShowCtl(false);
+    }, 2800);
   };
+
+  // Dong bo ref + quan ly hen gio theo trang thai play/pause (giong ban web).
+  useEffect(() => {
+    playingRef.current = playing;
+    if (!playing) {
+      setShowCtl(true);
+      clearTimeout(hideTimer.current);
+    } else {
+      poke();
+    }
+    return () => clearTimeout(hideTimer.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [playing]);
+
+  useEffect(() => () => clearTimeout(hideTimer.current), []);
 
   useEffect(() => {
     const v = videoRef.current;
