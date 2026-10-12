@@ -12,6 +12,7 @@
     "prebuild": "expo prebuild",
     "lint": "expo lint",
     "type-check": "tsc --noEmit",
+    "icons": "node scripts/build-icons.mjs",
     "clean": "rm -rf node_modules .expo dist web-build",
     "eas:build:dev": "eas build --profile development --platform android",
     "eas:build:apk": "eas build --profile preview --platform android --local",
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/react": "~19.2.4",
     "typescript": "~6.0.3"
   }

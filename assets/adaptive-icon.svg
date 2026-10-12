@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>Phim Ảnh - Adaptive Foreground</title>
+  <defs>
+    <linearGradient id="playGradA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2a35"/>
+      <stop offset="55%" stop-color="#e50914"/>
+      <stop offset="100%" stop-color="#b00610"/>
+    </linearGradient>
+    <linearGradient id="playShineA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Adaptive icons have a 66% safe zone (center). Keep key art in the inner 676x676. -->
+  <!-- Subtle film perforations inside the safe zone, on the sides -->
+  <g fill="#f5c518">
+    <rect x="172" y="476" width="36" height="72" rx="8"/>
+    <rect x="172" y="568" width="36" height="72" rx="8" opacity="0.7"/>
+    <rect x="816" y="384" width="36" height="72" rx="8" opacity="0.7"/>
+    <rect x="816" y="476" width="36" height="72" rx="8"/>
+    <rect x="816" y="568" width="36" height="72" rx="8" opacity="0.7"/>
+  </g>
+
+  <!-- Centered play triangle, safely inside the 66% zone -->
+  <g>
+    <path
+      d="M 386 312 L 386 712 L 730 512 Z"
+      fill="url(#playGradA)"
+      stroke="#e50914"
+      stroke-width="36"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M 386 312 L 386 712 L 730 512 Z"
+      fill="url(#playShineA)"
+      stroke="#ffffff"
+      stroke-width="36"
+      stroke-linejoin="round"
+      opacity="0.6"
+    />
+  </g>
+</svg>

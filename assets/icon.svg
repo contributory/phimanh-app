@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>Phim Ảnh</title>
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#e50914" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#e50914" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="playGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2a35"/>
+      <stop offset="55%" stop-color="#e50914"/>
+      <stop offset="100%" stop-color="#b00610"/>
+    </linearGradient>
+    <linearGradient id="playShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="0" y="0" width="1024" height="1024" rx="192" ry="192" fill="#0a0a0f"/>
+  <rect x="0" y="0" width="1024" height="1024" rx="192" ry="192" fill="url(#bgGlow)"/>
+
+  <!-- Film strip perforations - top row -->
+  <g fill="#f5c518">
+    <rect x="96"  y="96"  width="48" height="48" rx="8"/>
+    <rect x="232" y="96"  width="48" height="48" rx="8"/>
+    <rect x="368" y="96"  width="48" height="48" rx="8"/>
+    <rect x="504" y="96"  width="48" height="48" rx="8" opacity="0.55"/>
+    <rect x="608" y="96"  width="48" height="48" rx="8" opacity="0.55"/>
+    <rect x="744" y="96"  width="48" height="48" rx="8"/>
+    <rect x="880" y="96"  width="48" height="48" rx="8"/>
+  </g>
+
+  <!-- Film strip perforations - bottom row -->
+  <g fill="#f5c518">
+    <rect x="96"  y="880" width="48" height="48" rx="8"/>
+    <rect x="232" y="880" width="48" height="48" rx="8"/>
+    <rect x="368" y="880" width="48" height="48" rx="8"/>
+    <rect x="504" y="880" width="48" height="48" rx="8" opacity="0.55"/>
+    <rect x="608" y="880" width="48" height="48" rx="8" opacity="0.55"/>
+    <rect x="744" y="880" width="48" height="48" rx="8"/>
+    <rect x="880" y="880" width="48" height="48" rx="8"/>
+  </g>
+
+  <!-- Center play button (filled rounded triangle) -->
+  <g>
+    <path
+      d="M 386 312 L 386 712 L 730 512 Z"
+      fill="url(#playGrad)"
+      stroke="#e50914"
+      stroke-width="36"
+      stroke-linejoin="round"
+    />
+    <!-- Top shine on the triangle -->
+    <path
+      d="M 386 312 L 386 712 L 730 512 Z"
+      fill="url(#playShine)"
+      stroke="#ffffff"
+      stroke-width="36"
+      stroke-linejoin="round"
+      opacity="0.6"
+    />
+  </g>
+</svg>

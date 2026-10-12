@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Phim Ảnh</title>
+  <defs>
+    <linearGradient id="playGradF" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2a35"/>
+      <stop offset="100%" stop-color="#b00610"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="#0a0a0f"/>
+  <path
+    d="M 24 18 L 24 46 L 47 32 Z"
+    fill="url(#playGradF)"
+    stroke="#e50914"
+    stroke-width="3"
+    stroke-linejoin="round"
+  />
+</svg>
