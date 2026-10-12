@@ -23,3 +23,13 @@ android/
 
 # Logs
 *.log
+
+# EAS Build secrets (do not commit)
+secrets/
+google-service-account.json
+*.keystore.jks
+*.p12
+
+# EAS local build output
+*.apk
+*.aab

@@ -12,7 +12,13 @@
     "prebuild": "expo prebuild",
     "lint": "expo lint",
     "type-check": "tsc --noEmit",
-    "clean": "rm -rf node_modules .expo dist web-build"
+    "clean": "rm -rf node_modules .expo dist web-build",
+    "eas:build:dev": "eas build --profile development --platform android",
+    "eas:build:apk": "eas build --profile preview --platform android --local",
+    "eas:build:apk:remote": "eas build --profile preview --platform android",
+    "eas:build:prod": "eas build --profile production --platform android",
+    "eas:build:ios": "eas build --profile production --platform ios",
+    "eas:submit": "eas submit --platform android --latest"
   },
   "dependencies": {
     "@expo/metro-runtime": "~57.0.16",
