@@ -24,7 +24,7 @@
         "backgroundColor": "#0a0a0f"
       },
       "package": "com.phimanh.app",
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png",
